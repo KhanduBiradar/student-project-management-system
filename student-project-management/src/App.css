@@ -1,0 +1,226 @@
+/* =====================================================
+   LOGIN PAGE
+===================================================== */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  background:
+    radial-gradient(circle at top left, rgba(59, 130, 246, 0.22), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(124, 58, 237, 0.20), transparent 35%),
+    linear-gradient(135deg, #eff6ff 0%, #f8fafc 50%, #eef2ff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background decorative circles */
+
+.login-page::before,
+.login-page::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.login-page::before {
+  width: 280px;
+  height: 280px;
+  top: -100px;
+  left: -90px;
+  background: rgba(59, 130, 246, 0.10);
+}
+
+.login-page::after {
+  width: 340px;
+  height: 340px;
+  bottom: -140px;
+  right: -120px;
+  background: rgba(124, 58, 237, 0.10);
+}
+
+/* Login Card */
+
+.login-card {
+  width: 100%;
+  max-width: 460px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 24px;
+  padding: 38px;
+  box-shadow:
+    0 25px 60px rgba(15, 23, 42, 0.12),
+    0 8px 25px rgba(37, 99, 235, 0.08);
+  position: relative;
+  z-index: 2;
+  backdrop-filter: blur(12px);
+}
+
+/* Top Header */
+
+.login-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Logo */
+
+.login-header .logo {
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 15px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 38px;
+  box-shadow:
+    0 12px 28px rgba(37, 99, 235, 0.28);
+}
+
+/* SPMS */
+
+.login-header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #111827;
+}
+
+/* Subtitle */
+
+.login-header p {
+  margin-top: 8px;
+  margin-bottom: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* Labels */
+
+.login-card .form-label {
+  font-weight: 700;
+  color: #334155;
+  margin-bottom: 7px;
+}
+
+/* Input */
+
+.login-card .form-control,
+.login-card .form-select {
+  min-height: 48px;
+  border: 1px solid #dbe2ea;
+  border-radius: 11px;
+  padding: 11px 13px;
+  color: #111827;
+  background: #f8fafc;
+  transition: all 0.2s ease;
+}
+
+.login-card .form-control::placeholder {
+  color: #94a3b8;
+}
+
+/* Input focus */
+
+.login-card .form-control:focus,
+.login-card .form-select:focus {
+  border-color: #3b82f6;
+  background: #ffffff;
+  box-shadow:
+    0 0 0 4px rgba(59, 130, 246, 0.10);
+}
+
+/* Password button */
+
+.login-card .input-group .btn {
+  min-width: 72px;
+  border-radius: 0 11px 11px 0;
+  font-weight: 600;
+}
+
+/* Login Button */
+
+.login-btn {
+  min-height: 50px;
+  border: none !important;
+  border-radius: 11px !important;
+  background: linear-gradient(135deg, #2563eb, #7c3aed) !important;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  box-shadow:
+    0 10px 22px rgba(37, 99, 235, 0.22);
+  transition: all 0.2s ease;
+}
+
+.login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 14px 28px rgba(37, 99, 235, 0.28);
+}
+
+.login-btn:active {
+  transform: translateY(0);
+}
+
+/* Forgot Password */
+
+.login-card a {
+  color: #2563eb;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.login-card a:hover {
+  text-decoration: underline;
+}
+
+/* Small footer text */
+
+.login-card::after {
+  content: 'Student Project Management System';
+  display: block;
+  text-align: center;
+  margin-top: 25px;
+  padding-top: 18px;
+  border-top: 1px solid #e5e7eb;
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 576px) {
+
+  .login-page {
+    padding: 18px;
+  }
+
+  .login-card {
+    padding: 28px 20px;
+    border-radius: 20px;
+  }
+
+  .login-header .logo {
+    width: 68px;
+    height: 68px;
+    font-size: 32px;
+  }
+
+  .login-header h1 {
+    font-size: 27px;
+  }
+}
+
+
+

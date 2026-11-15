@@ -1,0 +1,13 @@
+{
+  "name": "student-project-management-system",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -k -n BACKEND,FRONTEND \"npm run backend\" \"npm run frontend\"",
+    "backend": "python backend-python/app.py",
+    "frontend": "npm.cmd --prefix student-project-management run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
